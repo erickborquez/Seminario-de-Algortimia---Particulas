@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>328</width>
-    <height>379</height>
+    <width>470</width>
+    <height>479</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,8 +19,8 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>321</width>
-      <height>331</height>
+      <width>491</width>
+      <height>441</height>
      </rect>
     </property>
     <property name="title">
@@ -36,10 +36,10 @@
       </rect>
      </property>
      <property name="text">
-      <string>id</string>
+      <string>Id</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit">
+    <widget class="QLineEdit" name="id_lineEdit">
      <property name="geometry">
       <rect>
        <x>90</x>
@@ -62,7 +62,7 @@
       <string>Origen X</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit_2">
+    <widget class="QLineEdit" name="origin_x_lineEdit">
      <property name="geometry">
       <rect>
        <x>90</x>
@@ -85,7 +85,7 @@
       <string>Origen Y</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit_3">
+    <widget class="QLineEdit" name="origin_y_lineEdit">
      <property name="geometry">
       <rect>
        <x>90</x>
@@ -108,7 +108,7 @@
       <string>Destino X</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit_4">
+    <widget class="QLineEdit" name="dest_x_lineEdit">
      <property name="geometry">
       <rect>
        <x>90</x>
@@ -131,7 +131,7 @@
       <string>Destino Y</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit_5">
+    <widget class="QLineEdit" name="dest_y_lineEdit">
      <property name="geometry">
       <rect>
        <x>90</x>
@@ -154,7 +154,7 @@
       <string>Velocidad</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit_6">
+    <widget class="QLineEdit" name="velocity_lineEdit">
      <property name="geometry">
       <rect>
        <x>90</x>
@@ -177,7 +177,7 @@
       <string>Color RGB</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit_7">
+    <widget class="QLineEdit" name="green_lineEdit">
      <property name="geometry">
       <rect>
        <x>90</x>
@@ -200,7 +200,7 @@
       <string>Rojo</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit_8">
+    <widget class="QLineEdit" name="red_lineEdit">
      <property name="geometry">
       <rect>
        <x>90</x>
@@ -223,7 +223,7 @@
       <string>Verde</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit_9">
+    <widget class="QLineEdit" name="blue_lineEdit">
      <property name="geometry">
       <rect>
        <x>90</x>
@@ -249,6 +249,49 @@
       <string>Azul</string>
      </property>
     </widget>
+    <widget class="QPlainTextEdit" name="plainTextEdit">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>30</y>
+       <width>251</width>
+       <height>401</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>340</y>
+       <width>181</width>
+       <height>89</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QPushButton" name="add_start_pushButton">
+        <property name="text">
+         <string>Agregar al inicio</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="add_end_pushButton">
+        <property name="text">
+         <string>Agregar al final</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="print_pushButton">
+        <property name="text">
+         <string>Imprimir</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -256,7 +299,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>328</width>
+     <width>470</width>
      <height>22</height>
     </rect>
    </property>
