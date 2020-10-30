@@ -1,4 +1,4 @@
-from PySide2.QtWidgets import QMainWindow
+from PySide2.QtWidgets import QMainWindow, QFileDialog, QMessageBox
 from PySide2.QtCore import Slot
 from ui_window import Ui_MainWindow
 from Particulas.particula import Particula
@@ -12,17 +12,47 @@ class MainWindow(QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
         self.ui.add_start_pushButton.clicked.connect(self.click_add_start)
-        self.ui.add_end_pushButton.clicked.connect(
-            self.click_add_end)
+        self.ui.add_end_pushButton.clicked.connect(self.click_add_end)
         self.ui.print_pushButton.clicked.connect(self.click_show)
+        self.ui.actionAbrir.triggered.connect(self.action_abrir_archivo)
+        self.ui.actionGuardar.triggered.connect(self.action_guardar_archivo)
 
     def click_show(self):
         # self.libreria.mostrar()
         self.ui.plainTextEdit.clear()
         self.ui.plainTextEdit.insertPlainText(str(self.particulas))
-        print(self.particulas)
-        print("???")
         self.particulas.mostrar()
+
+    @Slot()
+    def action_abrir_archivo(self):
+        ubicacion = QFileDialog.getOpenFileName(
+            self,
+            'Abrir Archivo',
+            '.',
+            'JSON (*.json)'
+        )[0]
+
+        if self.particulas.abrir(ubicacion):
+            QMessageBox.information(
+                self, "Éxito", "Se pudo crear el archivo " + ubicacion)
+        else:
+            QMessageBox.critical(
+                self, "Error", "No se puedo crear el archivo " + ubicacion)
+
+    @Slot()
+    def action_guardar_archivo(self):
+        ubicacion = QFileDialog.getSaveFileName(
+            self,
+            'Guardar Archivo',
+            '.',
+            "JSON (*.json)"
+        )[0]
+        if self.particulas.guardar(ubicacion):
+            QMessageBox.information(
+                self, "Éxito", "Se pudo crear el archivo " + ubicacion)
+        else:
+            QMessageBox.critical(
+                self, "Error", "No se puedo crear el archivo " + ubicacion)
 
     @Slot()
     def getParticula(self):
