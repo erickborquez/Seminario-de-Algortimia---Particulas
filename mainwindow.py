@@ -1,4 +1,5 @@
-from PySide2.QtWidgets import QMainWindow, QFileDialog, QMessageBox, QTableWidgetItem
+from PySide2.QtWidgets import QMainWindow, QFileDialog, QMessageBox, QTableWidgetItem, QGraphicsScene
+from PySide2.QtGui import QPen, QColor, QTransform
 from PySide2.QtCore import Slot
 from ui_window import Ui_MainWindow
 from Particulas.particula import Particula
@@ -20,6 +21,33 @@ class MainWindow(QMainWindow):
 
         self.ui.show_button.clicked.connect(self.click_show_table)
         self.ui.search_button.clicked.connect(self.click_search_table)
+
+        self.ui.draw_button.clicked.connect(self.draw)
+
+        self.scene = QGraphicsScene()
+        self.ui.graphicsView.setScene(self.scene)
+
+    def wheelEvent(self, event):
+        if event.delta() > 0:
+            self.ui.graphicsView.scale(1.2, 1.2)
+        else:
+            self.ui.graphicsView.scale(0.8, 0.8)
+
+    @Slot()
+    def draw(self):
+        pen = QPen()
+        pen.setWidth(2)
+
+        for particula in self.particulas:
+            color = QColor(particula.red, particula.green, particula.blue)
+            pen.setColor(color)
+            print(particula)
+            self.scene.addEllipse(particula.origen_x,
+                                  particula.origen_y, 3, 3, pen)
+            self.scene.addEllipse(particula.destino_x,
+                                  particula.destino_y, 3, 3, pen)
+            self.scene.addLine(particula.origen_x + 3, particula.origen_y +
+                               3, particula.destino_x, particula.destino_y, pen)
 
     @Slot()
     def click_show_table(self):

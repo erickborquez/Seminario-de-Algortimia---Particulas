@@ -1,6 +1,18 @@
 [
      {
           "id": "3",
+          "origen_x": 0,
+          "origen_y": 0,
+          "destino_x": 200,
+          "destino_y": 200,
+          "velocidad": 30,
+          "red": 240,
+          "green": 0,
+          "blue": 0,
+          "distancia": 282.842712474619
+     },
+     {
+          "id": "3",
           "origen_x": 33,
           "origen_y": 33,
           "destino_x": 33,
