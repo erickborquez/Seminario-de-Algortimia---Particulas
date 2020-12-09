@@ -27,11 +27,27 @@ class MainWindow(QMainWindow):
         self.scene = QGraphicsScene()
         self.ui.graphicsView.setScene(self.scene)
 
+        self.ui.sord_id_pushButton.clicked.connect(self.sortId)
+        self.ui.sort_dist_pushButton.clicked.connect(self.sortDist)
+        self.ui.sord_speed_pushButton.clicked.connect(self.sortSpeed)
+
     def wheelEvent(self, event):
         if event.delta() > 0:
             self.ui.graphicsView.scale(1.2, 1.2)
         else:
             self.ui.graphicsView.scale(0.8, 0.8)
+
+    @Slot()
+    def sortId(self):
+        self.particulas.sortId()
+
+    @Slot()
+    def sortDist(self):
+        self.particulas.sortId()
+
+    @Slot()
+    def sortSpeed(self):
+        self.particulas.sortId()
 
     @Slot()
     def draw(self):

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>859</width>
-    <height>577</height>
+    <height>671</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,7 +18,7 @@
     <item row="0" column="0">
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>2</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tab">
        <attribute name="title">
@@ -38,10 +38,10 @@
              </property>
             </widget>
            </item>
-           <item row="0" column="1">
+           <item row="0" column="1" colspan="3">
             <widget class="QLineEdit" name="id_lineEdit"/>
            </item>
-           <item row="0" column="2" rowspan="11">
+           <item row="0" column="4" rowspan="7">
             <widget class="QPlainTextEdit" name="plainTextEdit"/>
            </item>
            <item row="1" column="0">
@@ -51,7 +51,7 @@
              </property>
             </widget>
            </item>
-           <item row="1" column="1">
+           <item row="1" column="1" colspan="3">
             <widget class="QLineEdit" name="origin_x_lineEdit"/>
            </item>
            <item row="2" column="0">
@@ -61,7 +61,7 @@
              </property>
             </widget>
            </item>
-           <item row="2" column="1">
+           <item row="2" column="1" colspan="3">
             <widget class="QLineEdit" name="origin_y_lineEdit"/>
            </item>
            <item row="3" column="0">
@@ -71,7 +71,7 @@
              </property>
             </widget>
            </item>
-           <item row="3" column="1">
+           <item row="3" column="1" colspan="3">
             <widget class="QLineEdit" name="dest_x_lineEdit"/>
            </item>
            <item row="4" column="0">
@@ -81,7 +81,7 @@
              </property>
             </widget>
            </item>
-           <item row="4" column="1">
+           <item row="4" column="1" colspan="3">
             <widget class="QLineEdit" name="dest_y_lineEdit"/>
            </item>
            <item row="5" column="0">
@@ -91,7 +91,7 @@
              </property>
             </widget>
            </item>
-           <item row="5" column="1">
+           <item row="5" column="1" colspan="3">
             <widget class="QLineEdit" name="velocity_lineEdit"/>
            </item>
            <item row="6" column="0">
@@ -108,7 +108,7 @@
              </property>
             </widget>
            </item>
-           <item row="7" column="1">
+           <item row="7" column="1" colspan="3">
             <widget class="QLineEdit" name="red_lineEdit"/>
            </item>
            <item row="8" column="0">
@@ -118,7 +118,7 @@
              </property>
             </widget>
            </item>
-           <item row="8" column="1">
+           <item row="8" column="1" colspan="3">
             <widget class="QLineEdit" name="green_lineEdit"/>
            </item>
            <item row="9" column="0">
@@ -128,7 +128,7 @@
              </property>
             </widget>
            </item>
-           <item row="9" column="1">
+           <item row="9" column="1" colspan="3">
             <widget class="QLineEdit" name="blue_lineEdit">
              <property name="text">
               <string/>
@@ -136,29 +136,46 @@
             </widget>
            </item>
            <item row="10" column="0" colspan="2">
-            <layout class="QVBoxLayout" name="verticalLayout">
-             <item>
-              <widget class="QPushButton" name="add_start_pushButton">
-               <property name="text">
-                <string>Agregar al inicio</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="add_end_pushButton">
-               <property name="text">
-                <string>Agregar al final</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="print_pushButton">
-               <property name="text">
-                <string>Imprimir</string>
-               </property>
-              </widget>
-             </item>
-            </layout>
+            <widget class="QPushButton" name="add_start_pushButton">
+             <property name="text">
+              <string>Agregar al inicio</string>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="3">
+            <widget class="QPushButton" name="sord_id_pushButton">
+             <property name="text">
+              <string>Ordenar  Id</string>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="0" colspan="3">
+            <widget class="QPushButton" name="add_end_pushButton">
+             <property name="text">
+              <string>Agregar al final</string>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="3">
+            <widget class="QPushButton" name="sort_dist_pushButton">
+             <property name="text">
+              <string>Ordenar distancia</string>
+             </property>
+            </widget>
+           </item>
+           <item row="12" column="0" colspan="2">
+            <widget class="QPushButton" name="print_pushButton">
+             <property name="text">
+              <string>Imprimir</string>
+             </property>
+            </widget>
+           </item>
+           <item row="12" column="2" colspan="2">
+            <widget class="QPushButton" name="sord_speed_pushButton">
+             <property name="text">
+              <string>Ordenar velocidad</string>
+             </property>
+            </widget>
            </item>
           </layout>
          </widget>
